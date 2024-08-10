@@ -3,9 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" />
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header></header>
+    <main>
+      <section class="gap">
+        <article class="card">
+          <h1 class="mb-2">Kalkulator BMI</h1>
+          <p class="m-none">
+            Badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk
+            tubuh yang menunjang penampilan, berat badan ideal juga menandakan
+            kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang
+            di BMI Kalkulator.
+          </p>
+        </article>
+
+        <form action="" class="card">
+          <article>
+            <div class="mb-2">
+              <h4>Jenis Kelamin</h4>
+              <div class="flex button">
+                <div class="flex">
+                  <input
+                    type="radio"
+                    id="pria"
+                    name="jenis-kelamin"
+                    value="Pria"
+                    checked
+                  />
+                  <label for="pria" class="flex gender">Pria</label>
+                </div>
+                <div class="flex">
+                  <input
+                    type="radio"
+                    id="wanita"
+                    name="jenis-kelamin"
+                    value="Wanita"
+                  />
+                  <label for="wanita" class="flex gender">Wanita</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex cols align-start mb-2">
+              <h4><label for="bb">Berat Badan (kg)</label></h4>
+              <input
+                type="number"
+                id="bb"
+                name="berat-badan"
+                class="inputnumber"
+              />
+            </div>
+
+            <div class="flex cols align-start mb-2">
+              <h4><label for="tb">Tinggi Badan (cm)</label></h4>
+              <input
+                type="number"
+                id="tb"
+                name="tinggi-badan"
+                class="inputnumber"
+              />
+            </div>
+
+            <div>
+              <button type="submit">Hitung BMI</button>
+              <button type="reset" class="reset">Reset</button>
+            </div>
+          </article>
+        </form>
+
+        <article class="card">
+          <h1 class="mb-2">Fitur Unggulan</h1>
+
+          <li>Menghitung berat badan</li>
+          <li>Menentukan kategori berat badan ideal atau tidak</li>
+          <li>Mempersiapkan program penurunan berat badan</li>
+
+          <p>
+            Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil
+            atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak
+            ada tindakan yang harus diambil berdasarkan nilainya selain
+            berkonsultasi dengan orang yang memenuhi syarat seperti dokter.
+          </p>
+          <p class="m-none">
+            Kalkulator akan memberi Anda gambaran tentang perbandingan berat
+            badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung
+            sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat
+            tinggi badan Anda (dalam meter) atau BMI = Kg/M².
+          </p>
+        </article>
+      </section>
+
+      <section class="card">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui
+        exercitationem voluptatibus voluptatem sint eligendi accusamus deleniti
+        numquam molestias hic. Sed iusto eos ipsum totam modi nobis, numquam
+        provident soluta deserunt. Accusamus sapiente eos quibusdam velit enim
+        similique quod optio suscipit, sed repudiandae omnis ut nemo possimus
+        distinctio, tempore sit cum!
+      </section>
+    </main>
+    <footer></footer>
+  </body>
 </html>

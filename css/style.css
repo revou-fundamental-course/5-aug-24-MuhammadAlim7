@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --shadow: rgba(17, 17, 26, 0.025) 0px 4px 16px,
+    rgba(17, 17, 26, 0.025) 0px 8px 32px;
+  --anOshadow: 0 15px 40px -15px rgba(0, 0, 0, 0.05);
+  --gray100: rgb(243, 244, 246);
+  --borderColor: rgb(229, 231, 235);
+}
+
+body {
+  font-style: normal;
+  font-optical-sizing: auto;
+  background-color: var(--gray100);
+  font-family: "Outfit", sans-serif !important;
+}
+
+main {
+  gap: 1rem;
+  display: flex;
+  padding: 1rem;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  padding: 2em;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: var(--anOshadow);
+  border-color: var(--borderColor);
+}
+
+.gap {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+p,
+li {
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.m-none {
+  margin: 0;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.form- {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + .gender {
+  font-weight: 500;
+  border-color: var(--borderColor);
+  background-color: white;
+  box-shadow: var(--shadow);
+  color: rgb(14, 165, 233);
+}
+
+input[type="radio"]#wanita:checked + .gender {
+  color: rgb(244, 114, 182);
+}
+
+.gender {
+  width: 100%;
+  padding: 4px;
+  border-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.5rem;
+  justify-content: center;
+  color: rgb(71, 85, 105);
+  transition: all ease-in-out 0.3s;
+}
+
+.button {
+  border-width: 1px;
+  padding: 0.25rem;
+  border-style: solid;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  border-color: var(--borderColor);
+  background-color: var(--gray100);
+}
+
+.cols {
+  flex-direction: column;
+}
+
+input[type="number"] {
+  width: 100%;
+  outline: none;
+  border: 1px solid;
+  border-color: var(--borderColor);
+  padding: 0.72em;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  background-color: var(--gray100);
+  font-family: "Outfit", sans-serif !important;
+  box-sizing: border-box;
+}
+
+.mb-2 {
+  margin-bottom: 1em;
+}
+
+.align-start {
+  align-items: start;
+}
+
+button {
+  padding: 0.63em;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border-color: var(--borderColor);
+  background-color: rgb(17, 24, 39);
+  box-shadow: var(--shadow);
+  color: white;
+  font-family: "Outfit", sans-serif !important;
+}
+
+.reset {
+  background-color: white;
+  color: rgb(17, 24, 39);
+}
+
+input[type="number"]:focus {
+  outline: 1px solid;
+}
