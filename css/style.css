@@ -8,16 +8,34 @@
   --borderColor: rgb(229, 231, 235);
 }
 
+html {
+  scrollbar-gutter: stable both-edges;
+  scrollbar-color: rgb(17, 24, 39) var(--gray100);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-style: normal;
   font-optical-sizing: auto;
   background-color: var(--gray100);
   font-family: "Outfit", sans-serif !important;
+  /* font-size: small; */
 }
-
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .span-2 {
+    grid-column: span 2 / span 2;
+  }
+}
 main {
   gap: 1rem;
-  display: flex;
+  display: grid;
   padding: 1rem;
   max-width: 1280px;
   margin-left: auto;
@@ -49,11 +67,11 @@ h5 {
   margin-bottom: 1em;
 }
 
-p,
-li {
+p {
   line-height: 1.5;
   font-weight: 400;
   text-align: justify;
+  margin-bottom: 1em;
 }
 
 .m-none {
@@ -88,9 +106,16 @@ input[type="radio"]#wanita:checked + .gender {
   color: rgb(244, 114, 182);
 }
 
+input[type="radio"]#wanita:hover + .gender {
+  color: rgb(244, 114, 182);
+}
+input[type="radio"]#pria:hover + .gender {
+  color: rgb(14, 165, 233);
+}
 .gender {
   width: 100%;
-  padding: 4px;
+  padding: 2.4px;
+  cursor: pointer;
   border-color: transparent;
   border-width: 1px;
   border-style: solid;
@@ -119,7 +144,7 @@ input[type="number"] {
   outline: none;
   border: 1px solid;
   border-color: var(--borderColor);
-  padding: 0.72em;
+  padding: 0.66em;
   font-weight: 600;
   border-radius: 0.5rem;
   background-color: var(--gray100);
@@ -136,7 +161,7 @@ input[type="number"] {
 }
 
 button {
-  padding: 0.63em;
+  padding: 0.66em;
   border-width: 1px;
   border-style: solid;
   border-radius: 0.5rem;
@@ -146,8 +171,11 @@ button {
   box-shadow: var(--shadow);
   color: white;
   font-family: "Outfit", sans-serif !important;
+  cursor: pointer;
 }
-
+button:disabled {
+  cursor: not-allowed;
+}
 .reset {
   background-color: white;
   color: rgb(17, 24, 39);
@@ -155,4 +183,7 @@ button {
 
 input[type="number"]:focus {
   outline: 1px solid;
+}
+.img {
+  height: 48px;
 }

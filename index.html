@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalkulator BMI</title>
+    <link
+      rel="icon"
+      href="https://images.glints.com/unsafe/glints-dashboard.s3.amazonaws.com/company-logo/a32f81155cd0d4f16d36aef74f7d2644.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
   </head>
@@ -20,8 +25,7 @@
             di BMI Kalkulator.
           </p>
         </article>
-
-        <form action="" class="card">
+        <form action="" id="bmi" class="card">
           <article>
             <div class="mb-2">
               <h4>Jenis Kelamin</h4>
@@ -55,6 +59,7 @@
                 id="bb"
                 name="berat-badan"
                 class="inputnumber"
+                min="0"
               />
             </div>
 
@@ -65,23 +70,68 @@
                 id="tb"
                 name="tinggi-badan"
                 class="inputnumber"
+                min="0"
               />
             </div>
 
             <div>
-              <button type="submit">Hitung BMI</button>
+              <button type="submit" class="submit" disabled>Hitung BMI</button>
               <button type="reset" class="reset">Reset</button>
             </div>
           </article>
         </form>
 
+        <!-- <article class="card">
+          <h4>Download Aplikasi</h4>
+          <a title="Google Play, Public domain, via Wikimedia Commons"
+            ><img
+              width="128"
+              alt="Google Play Store badge EN"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/128px-Google_Play_Store_badge_EN.svg.png?20220907104002"
+          /></a>
+          <a title="Apple Inc., Public domain, via Wikimedia Commons"
+            ><img
+              width="128"
+              alt="Download on the App Store Badge"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/128px-Download_on_the_App_Store_Badge.svg.png?20170219160111"
+          /></a>
+        </article> -->
+      </section>
+
+      <section class="gap span-2">
+        <article id="result" class="card">
+          <h4><span id="ketBmi"></span></h4>
+          <h1><span id="hasilBmi"></span></h1>
+          <p><span id="descBmi"></span></p>
+          Gender: <span id="jKelamin"></span>
+        </article>
+        <article id="result" class="card">
+          <p><span id="rangeBmi"></span></p>
+          <p><span id="infoBmi"></span></p>
+
+          <i
+            >BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan
+            tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih
+            lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat
+            badan Anda.
+          </i>
+
+          <!-- <button disabled>Konsultasi Ahli Gizi Via Aplikasi</button>
+          <button disabled>Registrasi Online Ahli Gizi</button> -->
+        </article>
+        <article id="penyakit" class="card">
+          <h4 class="m-none mb-2"><span id="judulPenyakit"></span></h4>
+          <li id="list"></li>
+          <li id="list"></li>
+          <li id="list"></li>
+          <li id="list"></li>
+        </article>
+
         <article class="card">
           <h1 class="mb-2">Fitur Unggulan</h1>
-
           <li>Menghitung berat badan</li>
-          <li>Menentukan kategori berat badan ideal atau tidak</li>
-          <li>Mempersiapkan program penurunan berat badan</li>
-
+          <li>Menentukan kategori berat badan</li>
+          <li class="mb-2">Mempersiapkan program penurunan berat badan</li>
           <p>
             Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil
             atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak
@@ -95,15 +145,6 @@
             tinggi badan Anda (dalam meter) atau BMI = Kg/M².
           </p>
         </article>
-      </section>
-
-      <section class="card">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui
-        exercitationem voluptatibus voluptatem sint eligendi accusamus deleniti
-        numquam molestias hic. Sed iusto eos ipsum totam modi nobis, numquam
-        provident soluta deserunt. Accusamus sapiente eos quibusdam velit enim
-        similique quod optio suscipit, sed repudiandae omnis ut nemo possimus
-        distinctio, tempore sit cum!
       </section>
     </main>
     <footer></footer>
