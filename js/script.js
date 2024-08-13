@@ -116,22 +116,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // 2 18.5-24.9 Normal (ideal)
     // 1 25.0-29.9 Kelebihan berat badan
     // 0 30.0 atau lebih Kegemukan (Obesitas)
-    const kategori = bmi < 18.5 ? 3 : bmi < 25 ? 2 : bmi < 30 ? 1 : 0;
+    const kategori = bmi < 18.5 ? 3 : bmi < 25 ? 2 : bmi < 30 ? 1 : 0; //ifelse tenary buat kategori bb angka 0123 diambil sesuai array/object penjelasn
 
     // fungsi nampilin penyakit
     if (kategori !== 2) {
       const penyakitData = kategori === 3 ? penyakit[1] : penyakit[0];
       const { ketP, Ps } = penyakitData;
 
-      displayPenyakit.style.display = "block";
+      displayPenyakit.style.display = "block"; //nampilin element penyakit
       outputJudulPenyakit.textContent = ketP;
-
+      // buat list penyakit
       listItems.forEach((li, index) => {
         li.textContent = Ps[index];
-        li.style.display = "list-item"; // Pastikan elemen ditampilkan
       });
     } else {
-      displayPenyakit.style.display = "none";
+      displayPenyakit.style.display = "none"; //hapus penyakit bila bb ideal
       outputJudulPenyakit.textContent = "";
       listItems.forEach((li) => {
         li.textContent = "";
@@ -165,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
     inputs.forEach((input) => {
       input.value = input.value
         .slice(0, 3) // Membatasi panjang maksimal
-        .replace(/[^0-9]/g, ""); // Menghapus karakter non-numeric
+        .replace(/[^0-9]/g, ""); // hapus yang bukan nomer
     });
   }
 
@@ -206,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
     displayItem.forEach((element) => {
       element.style.display = "none";
     });
-    // buat matiin/disabling button submit
+    // panggil fungsi cekform
     cekForm();
   });
 });

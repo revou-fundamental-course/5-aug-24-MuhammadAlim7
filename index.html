@@ -4,18 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalkulator BMI</title>
-    <link
-      rel="icon"
-      href="https://images.glints.com/unsafe/glints-dashboard.s3.amazonaws.com/company-logo/a32f81155cd0d4f16d36aef74f7d2644.png"
-      type="image/x-icon"
-    />
+
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
   </head>
   <body>
-    <header></header>
     <main>
+      <!-- section kiri -->
       <section class="gap">
+        <!--  card judul -->
         <article class="card">
           <h1 class="mb-2">Kalkulator BMI</h1>
           <p class="m-none">
@@ -25,33 +22,33 @@
             di BMI Kalkulator.
           </p>
         </article>
-        <form action="" id="bmi" class="card">
-          <article>
+
+        <!-- card form -->
+        <article class="card">
+          <form action="" id="bmi">
+            <!-- radio jenis kelamin -->
             <div class="mb-2">
               <h4>Jenis Kelamin</h4>
-              <div class="flex button">
-                <div class="flex">
-                  <input
-                    type="radio"
-                    id="pria"
-                    name="jenis-kelamin"
-                    value="Pria"
-                    checked
-                  />
-                  <label for="pria" class="flex gender">Pria</label>
-                </div>
-                <div class="flex">
-                  <input
-                    type="radio"
-                    id="wanita"
-                    name="jenis-kelamin"
-                    value="Wanita"
-                  />
-                  <label for="wanita" class="flex gender">Wanita</label>
-                </div>
+              <div class="flex button switch">
+                <input
+                  type="radio"
+                  id="pria"
+                  name="jenis-kelamin"
+                  value="Pria"
+                  checked
+                />
+                <label for="pria" class="gender">Pria</label>
+                <input
+                  type="radio"
+                  id="wanita"
+                  name="jenis-kelamin"
+                  value="Wanita"
+                />
+                <label for="wanita" class="gender">Wanita</label>
+                <div class="slider"></div>
               </div>
             </div>
-
+            <!-- form berat badan -->
             <div class="flex cols align-start mb-2">
               <h4><label for="bb">Berat Badan (kg)</label></h4>
               <input
@@ -62,7 +59,7 @@
                 min="0"
               />
             </div>
-
+            <!-- form tinggi badan -->
             <div class="flex cols align-start mb-2">
               <h4><label for="tb">Tinggi Badan (cm)</label></h4>
               <input
@@ -73,38 +70,26 @@
                 min="0"
               />
             </div>
-
+            <!-- button submit & reset -->
             <div>
               <button type="submit" class="submit" disabled>Hitung BMI</button>
               <button type="reset" class="reset">Reset</button>
             </div>
-          </article>
-        </form>
-
-        <!-- <article class="card">
-          <h4>Download Aplikasi</h4>
-          <a title="Google Play, Public domain, via Wikimedia Commons"
-            ><img
-              width="128"
-              alt="Google Play Store badge EN"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/128px-Google_Play_Store_badge_EN.svg.png?20220907104002"
-          /></a>
-          <a title="Apple Inc., Public domain, via Wikimedia Commons"
-            ><img
-              width="128"
-              alt="Download on the App Store Badge"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/128px-Download_on_the_App_Store_Badge.svg.png?20170219160111"
-          /></a>
-        </article> -->
+          </form>
+        </article>
       </section>
 
+      <!-- section kanan -->
       <section class="gap span-2">
+        <!-- card hasul dkk -->
         <article id="result" class="card">
           <h4><span id="ketBmi"></span></h4>
           <h1><span id="hasilBmi"></span></h1>
           <p><span id="descBmi"></span></p>
           Gender: <span id="jKelamin"></span>
         </article>
+
+        <!-- card hasil dkk -->
         <article id="result" class="card">
           <p><span id="rangeBmi"></span></p>
           <p><span id="infoBmi"></span></p>
@@ -119,6 +104,8 @@
           <!-- <button disabled>Konsultasi Ahli Gizi Via Aplikasi</button>
           <button disabled>Registrasi Online Ahli Gizi</button> -->
         </article>
+
+        <!-- card penyakit -->
         <article id="penyakit" class="card">
           <h4 class="m-none mb-2"><span id="judulPenyakit"></span></h4>
           <li id="list"></li>
@@ -127,6 +114,7 @@
           <li id="list"></li>
         </article>
 
+        <!-- card fitur unggulan -->
         <article class="card">
           <h1 class="mb-2">Fitur Unggulan</h1>
           <li>Menghitung berat badan</li>
@@ -147,6 +135,5 @@
         </article>
       </section>
     </main>
-    <footer></footer>
   </body>
 </html>
