@@ -139,7 +139,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // nampilin gender
     inputKelamin.forEach((radio) => {
       if (radio.checked) {
-        outputGender.textContent = radio.value;
+        outputGender.src = "img/female.svg";
+      } else {
+        outputGender.src = "img/male.svg";
       }
     });
 

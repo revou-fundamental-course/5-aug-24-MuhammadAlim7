@@ -75,6 +75,7 @@ p {
 }
 
 .card {
+  position: relative;
   padding: 2em;
   border: 1px solid var(--borderColor);
   border-radius: 1rem;
@@ -93,6 +94,21 @@ p {
   border: 1px solid var(--borderColor);
   overflow: hidden;
 }
+.gIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 165%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+#ketBmi,
+#descBmi,
+#hasilBmi {
+  position: relative;
+  z-index: 1;
+}
 
 .gender {
   width: 50%;
@@ -109,7 +125,8 @@ p {
   width: 50%;
   height: 100%;
   background-color: white;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
+
   box-shadow: var(--shadow);
   transition: transform 0.4s cubic-bezier(0.79, -0.3, 0.25, 1.2);
 }
@@ -204,5 +221,12 @@ button:active {
 
   .span-2 {
     grid-column: span 2;
+  }
+}
+
+@media (min-width: 640px) {
+  .gIcon {
+    width: 100%;
+    opacity: 1;
   }
 }
